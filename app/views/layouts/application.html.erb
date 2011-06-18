@@ -3,21 +3,32 @@
 <head>
   <title>Rails3MongoidDevise</title>
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-  <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag 'application'%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul class="hmenu">
-    <%= render 'devise/menu/registration_items' %>
-    <%= render 'devise/menu/login_items' %>
-  </ul>
-  <%- flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-  <%- end -%>
+  <div  class="container">
 
-<%= yield %>
+        <div class="span-24">
+          <div class="span-19">
+            <%= link_to "Home", '#' %>
+          </div>
 
+            <div class="span-4">
+              <ul class="hmenu">
+                <%= render 'devise/menu/registration_items' %>
+                <%= render 'devise/menu/login_items' %>
+              </ul>
+            </div>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+          <%- end -%>
+        </div>
+
+        <div class="span-24">
+            <%= yield %>
+        </div>
+  </div>
 </body>
 </html>

@@ -12,6 +12,7 @@ ul.hmenu {
 }
 ul.hmenu li {
   display: inline;
+    list-style: none;
 }
 #flash_notice, #flash_alert {
   padding: 5px 8px;
