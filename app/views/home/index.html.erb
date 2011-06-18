@@ -1,4 +1,6 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<% @pois.each do |poi| %>
+  <p>place: <%=link_to poi.name, poi %></p>
 <% end %>
+
+<%= link_to "new place", new_poi_path() %><br />

@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc1'
 gem 'sass'
+gem "bcrypt-ruby", :require => "bcrypt"
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
@@ -14,3 +15,11 @@ gem "launchy", ">= 0.4.0", :group => :test
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.0.2"
 gem "devise", ">= 1.3.4"
+gem 'bond'
+gem 'plucky'
+gem 'wirble'
+gem 'bond-yard'
+gem 'yard'
+gem 'formtastic'
+gem 'simple_form'
+gem 'haml'

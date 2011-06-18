@@ -1,10 +1,13 @@
 Rails3MongoidDevise::Application.routes.draw do
+  get "pois/show"
+
   #get \"users\/show\"
 
   root :to => "home#index"
 
   devise_for :users
   resources :users, :only => :show
+  resources :pois
 
 
   # The priority is based upon order of creation:
