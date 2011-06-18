@@ -1,0 +1,7 @@
+%h3 Liste des places
+- @pois.each do |poi|
+  %p place:
+    = link_to poi.name, poi
+
+= link_to "new place", new_poi_path()
+%br
