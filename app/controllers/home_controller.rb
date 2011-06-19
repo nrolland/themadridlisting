@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @pois = Poi.all
+    @title = "Home"
   end
   def about
     @title = "About"
