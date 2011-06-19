@@ -2,6 +2,7 @@ class Poi
   include Mongoid::Document
 
     field :name
+    field :description
     embeds_one  :address
     embeds_many :opinions
     has_many :purposes

@@ -4,5 +4,5 @@
     place :
     = link_to poi.name, poi
 
-.signup_button.round== #{ link_to "new place", new_poi_path()}
+%p= link_to "add new place", new_poi_path(), :class => ["signup_button", "round"]
 %br

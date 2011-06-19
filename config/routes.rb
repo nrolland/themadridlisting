@@ -1,4 +1,8 @@
 Rails3MongoidDevise::Application.routes.draw do
+  match '/contact', :to => 'home#contact'
+  match '/about',   :to => 'home#about'
+  match '/help',    :to => 'home#help'
+
   get "pois/show"
 
   #get \"users\/show\"

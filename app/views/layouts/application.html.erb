@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rails3MongoidDevise</title>
-  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-  <%= stylesheet_link_tag 'application'%>
+<title><%= title %></title>
+  <%= stylesheet_link_tag "application-screen.css", :media => 'screen' %>
+  <%= stylesheet_link_tag "application-print.css", :media => 'print' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div  class="container">
-
-        <div class="span-24">
-          <div class="span-19">
-            <%= link_to "Home", '#' %>
-          </div>
-
-            <div class="span-4">
-              <ul class="hmenu">
-                <%= render 'devise/menu/registration_items' %>
-                <%= render 'devise/menu/login_items' %>
-              </ul>
-            </div>
-          <%- flash.each do |name, msg| -%>
-            <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-          <%- end -%>
+  <div  class="container showgrid">
+        <%=	 render 'layouts/header' %>
+        <div class="span-1 "><br/>
         </div>
-
-        <div class="span-24">
+        <div class="span-22 ">
             <%= yield %>
         </div>
+          <div class="span-1  last"><br/>
+          </div>
+    <div class="span-1 "><br/></div>
+      <div class="span-22 round">
+        <%=	 render 'layouts/footer' %>
+      </div>
+    <div class="span-1  last"><br/></div>
   </div>
 </body>
 </html>

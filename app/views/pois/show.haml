@@ -1,4 +1,7 @@
 %h2= @poi.name
 
-- 3.times do |i|
-    %h3= @poi.name
+%h3.quote.larger=  @poi.description
+
+%h4 The following users know this place
+- @poi.users.each do |user|
+    %h5.highlight= user.name
