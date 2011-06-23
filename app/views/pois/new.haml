@@ -3,4 +3,9 @@
     %legend
     = form.inputs do
       = form.input :name
-      = form.input :address
+      = form.input :description
+    = form.inputs :for => [:address, @poi.address ] do |address_form|
+      = address_form.input :number
+      = address_form.input :street
+      = address_form.input :city
+

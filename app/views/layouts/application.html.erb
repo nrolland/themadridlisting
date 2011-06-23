@@ -2,7 +2,7 @@
 <html>
 <head>
 <title class="title"><%= title %></title>
-  <%= stylesheet_link_tag "application-screen.css", :media => 'screen' %>
+  <%= stylesheet_link_tag "application-screen.css.scss", :media => 'screen' %>
   <%= stylesheet_link_tag "application-print.css", :media => 'print' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -20,8 +20,12 @@
     <div class="span-1 "><br/></div>
       <div class="span-22 round">
         <%=	 render 'layouts/footer' %>
+
       </div>
     <div class="span-1  last"><br/></div>
+     <% if Rails.env.development? %>
+        <div class="span-24  "><%= debug(params) %></div>
+     <%end %>
   </div>
 </body>
 </html>
